@@ -1,0 +1,140 @@
+.header {
+	background-color: black;
+	display: flex;
+	color: white;
+	padding: 10px 30px;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+
+	.burger {
+		position: absolute;
+		left: 30px;
+		display: none;
+		align-items: center;
+		width: 36px;
+		height: 10px;
+		background-color: transparent;
+		border: 0;
+		cursor: pointer;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			width: 20px;
+			background-color: #cdcdcd;
+			height: 2px;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 20px;
+			background-color: #cdcdcd;
+			height: 2px;
+		}
+	}
+
+	.menu__active {
+		transform: translateX(0) !important;
+		transition: all 0.2s;
+		display: none;
+	}
+
+	.menu,
+	.menu__active {
+		position: fixed;
+		width: 45vw;
+		height: 100vh;
+		top: 95px;
+		left: 0;
+
+		.blur {
+			width: 100vw;
+			height: 100vh;
+			backdrop-filter: blur(2px);
+			position: absolute;
+			top: 0;
+		}
+
+		.menu__content {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			flex-direction: column;
+			padding: 38px 30px 38px;
+			gap: 15px;
+			position: absolute;
+			transition: all 0.2s;
+
+			a {
+				display: flex;
+				align-items: flex-end;
+				font-size: 14px;
+				width: fit-content;
+
+				&:hover {
+					color: white;
+					transition: all 0.15s;
+
+					p {
+						border-bottom: 2px solid #5b61eb;
+					}
+				}
+			}
+		}
+	}
+
+	.menu {
+		transform: translateX(-100%);
+		transition: all 0.2s;
+	}
+
+	ul {
+		display: flex;
+		gap: 30px;
+		width: 100%;
+
+		a {
+			font-size: 12px;
+		}
+
+		&:last-child {
+			justify-content: flex-end;
+		}
+	}
+
+	.logo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h2 {
+			margin: 0;
+			font-weight: 400;
+			font-size: 26px;
+			letter-spacing: 2px;
+			padding-bottom: 5px;
+			border-bottom: 1px solid white;
+		}
+		span {
+			padding: 7px;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.header {
+		.burger,
+		.menu__active {
+			display: flex !important;
+		}
+
+		ul {
+			display: none;
+		}
+	}
+}

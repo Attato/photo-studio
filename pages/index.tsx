@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from 'styles/Home.module.scss';
+import Header from 'components/header/header';
 
 const Home = () => {
 	return (
@@ -11,6 +12,7 @@ const Home = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
+			<Header></Header>
 			<main className={styles.main}></main>
 
 			<footer className={styles.footer}></footer>
