@@ -14,31 +14,43 @@ const Header = () => {
 			<div className={isOpen ? styles.menu__active : styles.menu}>
 				<div className={styles.blur} onClick={() => setIsOpen(false)} />
 				<div className={styles.menu__content}>
-					<Link href="/" onClick={() => setIsOpen(!isOpen)}>
-						Главная
+					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+						Как пройти
 					</Link>
-					<Link href="/movies" onClick={() => setIsOpen(!isOpen)}>
-						Фильмы
+					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+						Календарь
 					</Link>
-					<Link href="/cartoons" onClick={() => setIsOpen(!isOpen)}>
-						Подписка
+					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+						Мероприятия
+					</Link>
+					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+						Залы
+					</Link>
+					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+						Сертификаты
+					</Link>
+					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+						Оборудование
+					</Link>
+					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+						Контакты
 					</Link>
 				</div>
 			</div>
 			<ul>
-				<Link href="/">Как пройти</Link>
-				<Link href="/">Календарь</Link>
-				<Link href="/">Мероприятия</Link>
+				<Link href="/*">Как пройти</Link>
+				<Link href="/*">Календарь</Link>
+				<Link href="/*">Мероприятия</Link>
 			</ul>
 			<div className={styles.logo}>
 				<h2>STORIES</h2>
 				<span>studio</span>
 			</div>
 			<ul>
-				<Link href="/">Залы</Link>
-				<Link href="/">Сертификаты</Link>
-				<Link href="/">Оборудование</Link>
-				<Link href="/">Контакты</Link>
+				<Link href="/*">Залы</Link>
+				<Link href="/*">Сертификаты</Link>
+				<Link href="/*">Оборудование</Link>
+				<Link href="/*">Контакты</Link>
 			</ul>
 		</header>
 	);
