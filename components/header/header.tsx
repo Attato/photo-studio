@@ -12,7 +12,10 @@ const Header = () => {
 				className={styles.burger}
 			></button>
 			<div className={isOpen ? styles.menu__active : styles.menu}>
-				<div className={styles.blur} onClick={() => setIsOpen(false)} />
+				{isOpen && (
+					<div className={styles.blur} onClick={() => setIsOpen(false)} />
+				)}
+
 				<div className={styles.menu__content}>
 					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
 						Как пройти
