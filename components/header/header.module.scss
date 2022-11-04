@@ -46,7 +46,7 @@
 	.menu,
 	.menu__active {
 		position: fixed;
-		width: 45vw;
+		width: 50vw;
 		height: 100vh;
 		top: 95px;
 		left: 0;
@@ -57,7 +57,7 @@
 			backdrop-filter: blur(2px);
 			position: absolute;
 			top: 0;
-			left: 45vw;
+			left: 50vw;
 		}
 
 		.menu__content {
