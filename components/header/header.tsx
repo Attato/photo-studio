@@ -17,43 +17,37 @@ const Header = () => {
 				)}
 
 				<div className={styles.menu__content}>
-					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+					<Link
+						href="https://yandex.ru/maps/-/CCU6ZGejcC"
+						target="blank"
+						onClick={() => setIsOpen(!isOpen)}
+					>
 						Как пройти
 					</Link>
-					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
-						Календарь
-					</Link>
-					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
-						Мероприятия
-					</Link>
-					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+					<Link href="/#hall" onClick={() => setIsOpen(!isOpen)}>
 						Залы
-					</Link>
-					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
-						Сертификаты
 					</Link>
 					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
 						Оборудование
 					</Link>
-					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+					<Link href="/#contacts" onClick={() => setIsOpen(!isOpen)}>
 						Контакты
 					</Link>
 				</div>
 			</div>
 			<ul>
-				<Link href="/*">Как пройти</Link>
-				<Link href="/*">Календарь</Link>
-				<Link href="/*">Мероприятия</Link>
+				<Link href="https://yandex.ru/maps/-/CCU6ZGejcC" target="blank">
+					Как пройти
+				</Link>
 			</ul>
-			<div className={styles.logo}>
+			<Link href="/" className={styles.logo}>
 				<h2>STORIES</h2>
 				<span>studio</span>
-			</div>
+			</Link>
 			<ul>
-				<Link href="/*">Залы</Link>
-				<Link href="/*">Сертификаты</Link>
+				<Link href="#hall">Залы</Link>
 				<Link href="/*">Оборудование</Link>
-				<Link href="/*">Контакты</Link>
+				<Link href="#contacts">Контакты</Link>
 			</ul>
 		</header>
 	);
