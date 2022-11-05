@@ -33,7 +33,8 @@ const Home = () => {
 					</div>
 				</div>
 
-				<div className={styles.title__section} id="hall">
+				<div className={styles.title__section}>
+					<span id="hall" className={styles.hall}></span>
 					<h1>Зал ПЕСОК</h1>
 					<div className={styles.column}>
 						<span>Площадь - 115 кв. м</span>
