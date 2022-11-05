@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from 'styles/Home.module.scss';
 import Header from 'components/header/header';
+
+import sand from 'pages/api/sand.json';
+import interior from 'pages/api/interior.json';
+import scandi from 'pages/api/scandi.json';
+import bohemia from 'pages/api/bohemia.json';
 
 const Home = () => {
 	return (
@@ -12,10 +18,153 @@ const Home = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Header></Header>
-			<main className={styles.main}></main>
+			<Header />
+			<main className={styles.main}>
+				<div className={styles.masthead}>
+					<div className={styles.masthead__content}>
+						<h1>Интерьерная фотостудия Екатеринбурга</h1>
+						<span>Здесь рождаются ваши истории...</span>
+						<div className={styles.buttons__wrap}>
+							<Link href="https://yandex.ru/maps/-/CCU6ZGejcC" target="blank">
+								Как к нам пройти
+							</Link>
+							<Link href="/#contacts">Наши контакты</Link>
+						</div>
+					</div>
+				</div>
 
-			<footer className={styles.footer}></footer>
+				<div className={styles.title__section} id="hall">
+					<h1>Зал ПЕСОК</h1>
+					<div className={styles.column}>
+						<span>Площадь - 115 кв. м</span>
+						<span>Высота потолков - 3.5 м.</span>
+						<span>Стоимость 1 часа - 1500р.</span>
+					</div>
+				</div>
+
+				<div className={styles.gallery}>
+					{sand.map((movie, id) => {
+						return (
+							<div className={styles.card} key={id}>
+								<div
+									className={styles.image}
+									draggable="false"
+									style={{ backgroundImage: `url(${movie.image})` }}
+								></div>
+							</div>
+						);
+					})}
+				</div>
+
+				<div className={styles.title__section}>
+					<h1>Зал ИНТЕРЬЕР</h1>
+					<div className={styles.column}>
+						<span>Площадь - 80 кв. м</span>
+						<span>Высота потолков - 3.5 м</span>
+						<span>Стоимость 1 часа (пн-чт) - 1400р.</span>
+						<span>Стоимость 1 часа (пт-вс) - 1700р.</span>
+					</div>
+				</div>
+
+				<div className={styles.gallery}>
+					{interior.map((movie, id) => {
+						return (
+							<div className={styles.card} key={id}>
+								<div
+									className={styles.image}
+									draggable="false"
+									style={{ backgroundImage: `url(${movie.image})` }}
+								></div>
+							</div>
+						);
+					})}
+				</div>
+
+				<div className={styles.title__section}>
+					<h1>Зал SCANDI</h1>
+					<div className={styles.column}>
+						<span>Площадь - 75 кв. м</span>
+						<span>Высота потолков - 4.6 м</span>
+						<span>Стоимость 1 часа (пн-чт) - 1400р.</span>
+						<span>Стоимость 1 часа (пт-вс) - 1700р.</span>
+					</div>
+				</div>
+
+				<div className={styles.gallery}>
+					{scandi.map((movie, id) => {
+						return (
+							<div className={styles.card} key={id}>
+								<div
+									className={styles.image}
+									draggable="false"
+									style={{ backgroundImage: `url(${movie.image})` }}
+								></div>
+							</div>
+						);
+					})}
+				</div>
+
+				<div className={styles.title__section}>
+					<h1>Зал BOHEMIA</h1>
+					<div className={styles.column}>
+						<span>Площадь - 100 кв. м</span>
+						<span>Высота потолков - 4.6 м</span>
+						<span>Стоимость 1 часа (пн-чт) - 1400р.</span>
+						<span>Стоимость 1 часа (пт-вс) - 1700р.</span>
+					</div>
+				</div>
+
+				<div className={styles.gallery}>
+					{bohemia.map((movie, id) => {
+						return (
+							<div className={styles.card} key={id}>
+								<div
+									className={styles.image}
+									draggable="false"
+									style={{ backgroundImage: `url(${movie.image})` }}
+								></div>
+							</div>
+						);
+					})}
+				</div>
+
+				<div className={styles.title__section}>
+					<h1>Отмена и перенос брони</h1>
+					<span>
+						Правила действуют во всех случаях, независимо от причины отмены
+						(включая форс-мажоры).
+					</span>
+					<div className={styles.row}>
+						<div className={styles.column}>
+							<h3>1. Более чем за 3 календарных дня:</h3>
+							<span>• предоплата возвращается 100%.</span>
+						</div>
+						<div className={styles.column}>
+							<h3>2. От 3х полных дней до 1го дня:</h3>
+							<span>• возврат 50%.</span>
+						</div>
+						<div className={styles.column}>
+							<h3>3. Менее чем за сутки:</h3>
+							<span>• предоплата не возвращается.</span>
+						</div>
+					</div>
+				</div>
+
+				<div className={styles.contact__section} id="contacts">
+					<h1>Контакты</h1>
+					<span>
+						г. Екатеринбург, Верх-Исетский бульвар 13, Мебельный центр ЭМА
+					</span>
+					<Link href="tel:+79120371164">+7 (912) 037-11-64</Link>
+				</div>
+
+				<footer className={styles.footer}>
+					<div className={styles.logo}>
+						<h2>STORIES</h2>
+						<span>studio</span>
+					</div>
+				</footer>
+			</main>
 		</div>
 	);
 };

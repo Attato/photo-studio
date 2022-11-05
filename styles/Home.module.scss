@@ -1,4 +1,236 @@
 .container {
 	max-width: 2560px;
 	margin: auto;
+
+	.main {
+		.masthead {
+			background-image: url(/images/masthead.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			color: white;
+
+			.masthead__content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: calc(100vh - 95px);
+				max-height: 1080px;
+				max-width: 930px;
+				margin: auto;
+				justify-content: center;
+			}
+
+			h1 {
+				font-size: 72px;
+				font-weight: 300;
+				text-align: center;
+			}
+
+			span {
+				font-size: 22px;
+			}
+
+			.buttons__wrap {
+				display: flex;
+				gap: 15px;
+				margin-top: 45px;
+
+				a {
+					padding: 10px;
+					background-color: #fff;
+					color: black;
+				}
+			}
+		}
+
+		.title__section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			max-width: 930px;
+			margin: auto;
+			padding: 135px 0 90px;
+
+			h1 {
+				font-size: 42px;
+				font-weight: 300;
+			}
+
+			span {
+				font-size: 24px;
+				font-weight: 300;
+				max-width: 600px;
+				margin-bottom: 40px;
+				padding: 0 15px;
+			}
+
+			.column {
+				display: flex;
+				flex-direction: column;
+
+				span {
+					font-size: 24px;
+					font-weight: 300;
+				}
+			}
+
+			.row {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 40px;
+				justify-content: space-evenly;
+
+				.column {
+					display: flex;
+					text-align: left;
+					gap: 15px;
+
+					h3 {
+						font-size: 18px;
+						margin: 0;
+						font-weight: 400;
+					}
+
+					span {
+						font-size: 16px;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			max-width: 1300px;
+			margin: auto;
+
+			.card {
+				width: 25%;
+				padding: 8px;
+
+				.image {
+					display: block;
+					padding-top: 140%;
+					border-radius: 4px;
+					background-size: cover;
+					background-position: 50%;
+					height: 100%;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.contact__section {
+			background-color: #efefef;
+			padding: 65px 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			h1 {
+				font-size: 42px;
+				font-weight: 300;
+			}
+
+			span,
+			a {
+				font-size: 24px;
+				font-weight: 300;
+				text-align: center;
+			}
+
+			span {
+				margin-bottom: 15px;
+			}
+		}
+
+		.footer {
+			padding: 20px 0;
+			background-color: #222;
+			color: white;
+
+			.logo {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				h2 {
+					margin: 0;
+					font-weight: 400;
+					font-size: 26px;
+					letter-spacing: 2px;
+					padding-bottom: 5px;
+					border-bottom: 1px solid white;
+				}
+				span {
+					padding: 7px;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.masthead__content {
+		h1 {
+			font-size: 48px !important;
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.masthead__content {
+		h1 {
+			font-size: 36px !important;
+		}
+
+		span {
+			font-size: 16px !important;
+		}
+	}
+
+	.title__section {
+		padding: 35px 0 !important;
+
+		h1 {
+			font-size: 36px !important;
+		}
+
+		span {
+			font-size: 16px !important;
+		}
+	}
+
+	.contact__section {
+		h1 {
+			font-size: 36px !important;
+		}
+
+		span {
+			font-size: 16px !important;
+		}
+	}
+
+	.card {
+		padding: 3px !important;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.masthead__content {
+		.buttons__wrap {
+			a {
+				font-size: 13px;
+			}
+		}
+	}
+
+	.row {
+		flex-direction: column;
+		padding: 0 15px;
+	}
 }
