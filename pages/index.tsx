@@ -1,5 +1,5 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from 'styles/Home.module.scss';
 import Header from 'components/header/header';
@@ -9,7 +9,7 @@ import interior from 'pages/api/interior.json';
 import scandi from 'pages/api/scandi.json';
 import bohemia from 'pages/api/bohemia.json';
 
-const Home = () => {
+const Home: NextPage = () => {
 	return (
 		<div className={styles.container}>
 			<Head>
