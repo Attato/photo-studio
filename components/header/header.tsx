@@ -10,7 +10,7 @@ const Header = () => {
 		<header className={styles.header}>
 			<button
 				onClick={() => setIsOpen(!isOpen)}
-				className={styles.burger}
+				className={isOpen ? styles.burger__active : styles.burger}
 			></button>
 			<div className={isOpen ? styles.menu__active : styles.menu}>
 				{isOpen && (

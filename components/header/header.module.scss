@@ -11,7 +11,8 @@
 	text-transform: uppercase;
 	z-index: 10;
 
-	.burger {
+	.burger,
+	.burger__active {
 		position: absolute;
 		left: 30px;
 		display: none;
@@ -29,6 +30,8 @@
 			width: 20px;
 			background-color: #cdcdcd;
 			height: 2px;
+			transform: rotate(0deg);
+			transition: all 0.3s;
 		}
 
 		&:after {
@@ -38,6 +41,35 @@
 			width: 20px;
 			background-color: #cdcdcd;
 			height: 2px;
+			transform: rotate(0deg);
+			transition: all 0.3s;
+		}
+	}
+
+	.burger__active {
+		display: flex;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 4px;
+			width: 20px;
+			background-color: #cdcdcd;
+			height: 2px;
+			transform: rotate(45deg);
+			transition: all 0.3s;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 4px;
+			width: 20px;
+			background-color: #cdcdcd;
+			height: 2px;
+			transform: rotate(135deg);
+			transition: all 0.3s;
 		}
 	}
 
@@ -157,5 +189,11 @@
 		ul {
 			display: none;
 		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.menu__active {
+		width: 65vw !important;
 	}
 }
