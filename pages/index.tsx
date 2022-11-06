@@ -5,7 +5,7 @@ import styles from 'styles/Home.module.scss';
 import Header from 'components/header/header';
 import Footer from 'components/footer/footer';
 
-import sand from 'pages/api/sand.json';
+import vintage from 'pages/api/vintage.json';
 import interior from 'pages/api/interior.json';
 import scandi from 'pages/api/scandi.json';
 import bohemia from 'pages/api/bohemia.json';
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
 				<div className={styles.title__section}>
 					<span id="hall" className={styles.hall}></span>
-					<h1>Зал ПЕСОК</h1>
+					<h1>Зал VINTAGE</h1>
 					<div className={styles.column}>
 						<span>Площадь - 115 кв. м</span>
 						<span>Высота потолков - 3.5 м.</span>
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
 				</div>
 
 				<div className={styles.gallery}>
-					{sand.map((images, id) => {
+					{vintage.map((images, id) => {
 						return (
 							<div className={styles.card} key={id}>
 								<div
