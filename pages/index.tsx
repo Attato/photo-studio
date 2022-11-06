@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from 'styles/Home.module.scss';
 import Header from 'components/header/header';
+import Footer from 'components/footer/footer';
 
 import sand from 'pages/api/sand.json';
 import interior from 'pages/api/interior.json';
@@ -25,7 +26,7 @@ const Home: NextPage = () => {
 						<h1>Интерьерная фотостудия Екатеринбурга</h1>
 						<span>Здесь рождаются ваши истории...</span>
 						<div className={styles.buttons__wrap}>
-							<Link href="https://yandex.ru/maps/-/CCU6ZGejcC" target="blank">
+							<Link href="https://yandex.ru/maps/-/CCU66XW99B" target="blank">
 								Как к нам пройти
 							</Link>
 							<Link href="/#contacts">Наши контакты</Link>
@@ -44,13 +45,13 @@ const Home: NextPage = () => {
 				</div>
 
 				<div className={styles.gallery}>
-					{sand.map((movie, id) => {
+					{sand.map((images, id) => {
 						return (
 							<div className={styles.card} key={id}>
 								<div
 									className={styles.image}
 									draggable="false"
-									style={{ backgroundImage: `url(${movie.image})` }}
+									style={{ backgroundImage: `url(${images.image})` }}
 								></div>
 							</div>
 						);
@@ -68,13 +69,13 @@ const Home: NextPage = () => {
 				</div>
 
 				<div className={styles.gallery}>
-					{interior.map((movie, id) => {
+					{interior.map((images, id) => {
 						return (
 							<div className={styles.card} key={id}>
 								<div
 									className={styles.image}
 									draggable="false"
-									style={{ backgroundImage: `url(${movie.image})` }}
+									style={{ backgroundImage: `url(${images.image})` }}
 								></div>
 							</div>
 						);
@@ -92,13 +93,13 @@ const Home: NextPage = () => {
 				</div>
 
 				<div className={styles.gallery}>
-					{scandi.map((movie, id) => {
+					{scandi.map((images, id) => {
 						return (
 							<div className={styles.card} key={id}>
 								<div
 									className={styles.image}
 									draggable="false"
-									style={{ backgroundImage: `url(${movie.image})` }}
+									style={{ backgroundImage: `url(${images.image})` }}
 								></div>
 							</div>
 						);
@@ -116,13 +117,13 @@ const Home: NextPage = () => {
 				</div>
 
 				<div className={styles.gallery}>
-					{bohemia.map((movie, id) => {
+					{bohemia.map((images, id) => {
 						return (
 							<div className={styles.card} key={id}>
 								<div
 									className={styles.image}
 									draggable="false"
-									style={{ backgroundImage: `url(${movie.image})` }}
+									style={{ backgroundImage: `url(${images.image})` }}
 								></div>
 							</div>
 						);
@@ -151,20 +152,7 @@ const Home: NextPage = () => {
 					</div>
 				</div>
 
-				<div className={styles.contact__section} id="contacts">
-					<h1>Контакты</h1>
-					<span>
-						г. Екатеринбург, Верх-Исетский бульвар 13, Мебельный центр ЭМА
-					</span>
-					<Link href="tel:+79120371164">+7 (912) 037-11-64</Link>
-				</div>
-
-				<footer className={styles.footer}>
-					<div className={styles.logo}>
-						<h2>STORIES</h2>
-						<span>studio</span>
-					</div>
-				</footer>
+				<Footer />
 			</main>
 		</div>
 	);
