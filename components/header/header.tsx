@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './header.module.scss';
 
 const Header = () => {
@@ -27,11 +28,16 @@ const Header = () => {
 					<Link href="/#hall" onClick={() => setIsOpen(!isOpen)}>
 						Залы
 					</Link>
-					<Link href="/equipment" onClick={() => setIsOpen(!isOpen)}>
-						Оборудование
-					</Link>
 					<Link href="/#contacts" onClick={() => setIsOpen(!isOpen)}>
 						Контакты
+					</Link>
+					<Link
+						href="https://vk.com/public217020824"
+						target="_blank"
+						className={styles.social}
+					>
+						<Image src="/vk.svg" width={22} height={22} alt="svg"></Image>
+						Мы Вконтакте
 					</Link>
 				</div>
 			</div>
@@ -46,7 +52,6 @@ const Header = () => {
 			</Link>
 			<ul>
 				<Link href="#hall">Залы</Link>
-				<Link href="/equipment">Оборудование</Link>
 				<Link href="#contacts">Контакты</Link>
 			</ul>
 		</header>
