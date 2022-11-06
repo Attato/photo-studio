@@ -18,7 +18,7 @@ const Header = () => {
 
 				<div className={styles.menu__content}>
 					<Link
-						href="https://yandex.ru/maps/-/CCU6ZGejcC"
+						href="https://yandex.ru/maps/-/CCU66XW99B"
 						target="blank"
 						onClick={() => setIsOpen(!isOpen)}
 					>
@@ -27,7 +27,7 @@ const Header = () => {
 					<Link href="/#hall" onClick={() => setIsOpen(!isOpen)}>
 						Залы
 					</Link>
-					<Link href="/*" onClick={() => setIsOpen(!isOpen)}>
+					<Link href="/equipment" onClick={() => setIsOpen(!isOpen)}>
 						Оборудование
 					</Link>
 					<Link href="/#contacts" onClick={() => setIsOpen(!isOpen)}>
@@ -36,17 +36,17 @@ const Header = () => {
 				</div>
 			</div>
 			<ul>
-				<Link href="https://yandex.ru/maps/-/CCU6ZGejcC" target="blank">
+				<Link href="https://yandex.ru/maps/-/CCU66XW99B" target="blank">
 					Как пройти
 				</Link>
 			</ul>
 			<Link href="/" className={styles.logo}>
-				<h2>STORIES</h2>
+				<h2>ICON</h2>
 				<span>studio</span>
 			</Link>
 			<ul>
 				<Link href="#hall">Залы</Link>
-				<Link href="/*">Оборудование</Link>
+				<Link href="/equipment">Оборудование</Link>
 				<Link href="#contacts">Контакты</Link>
 			</ul>
 		</header>
