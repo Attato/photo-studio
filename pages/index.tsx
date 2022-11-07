@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 					<span id="hall" className={styles.hall}></span>
 					<h1>Зал VINTAGE</h1>
 					<div className={styles.column}>
-						<span>Площадь - 115 кв. м</span>
+						<span>Площадь - 40 кв. м</span>
 						<span>Высота потолков - 3.5 м.</span>
 						<span>Стоимость 1 часа - 1500р.</span>
 					</div>
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
 				<div className={styles.title__section}>
 					<h1>Зал ИНТЕРЬЕР</h1>
 					<div className={styles.column}>
-						<span>Площадь - 80 кв. м</span>
+						<span>Площадь - 60 кв. м</span>
 						<span>Высота потолков - 3.5 м</span>
 						<span>Стоимость 1 часа (пн-чт) - 1400р.</span>
 						<span>Стоимость 1 часа (пт-вс) - 1700р.</span>
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
 				<div className={styles.title__section}>
 					<h1>Зал SCANDI</h1>
 					<div className={styles.column}>
-						<span>Площадь - 75 кв. м</span>
+						<span>Площадь - 65 кв. м</span>
 						<span>Высота потолков - 4.6 м</span>
 						<span>Стоимость 1 часа (пн-чт) - 1400р.</span>
 						<span>Стоимость 1 часа (пт-вс) - 1700р.</span>
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
 				<div className={styles.title__section}>
 					<h1>Зал BOHEMIA</h1>
 					<div className={styles.column}>
-						<span>Площадь - 100 кв. м</span>
+						<span>Площадь - 60 кв. м</span>
 						<span>Высота потолков - 4.6 м</span>
 						<span>Стоимость 1 часа (пн-чт) - 1400р.</span>
 						<span>Стоимость 1 часа (пт-вс) - 1700р.</span>
